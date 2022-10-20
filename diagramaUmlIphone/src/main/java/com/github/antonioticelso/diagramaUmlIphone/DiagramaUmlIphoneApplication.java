@@ -1,5 +1,6 @@
 package com.github.antonioticelso.diagramaUmlIphone;
 
+import com.github.antonioticelso.diagramaUmlIphone.model.AparelhoMusical;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DiagramaUmlIphoneApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DiagramaUmlIphoneApplication.class, args);
+
+		AparelhoMusical aparelho = new AparelhoMusical();
+
+		aparelho.getTocar();
+
+
+//		SpringApplication.run(DiagramaUmlIphoneApplication.class, args);
 	}
 
 }
