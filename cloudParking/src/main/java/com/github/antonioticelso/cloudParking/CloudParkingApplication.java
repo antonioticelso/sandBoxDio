@@ -10,5 +10,4 @@ public class CloudParkingApplication {
 		SpringApplication.run(CloudParkingApplication.class, args);
 	}
 
-//	fim da aula 3
 }
