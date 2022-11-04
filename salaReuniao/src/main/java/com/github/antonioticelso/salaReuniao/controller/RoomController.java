@@ -3,11 +3,10 @@ package com.github.antonioticelso.salaReuniao.controller;
 import com.github.antonioticelso.salaReuniao.exception.ResourceNotFoundException;
 import com.github.antonioticelso.salaReuniao.model.Room;
 import com.github.antonioticelso.salaReuniao.repository.RoomRepository;
-import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,8 +16,11 @@ import java.util.Map;
 @RequestMapping("/api/v1")
 public class RoomController {
 
-//    @Autowired
     private RoomRepository repository;
+
+    public RoomController(RoomRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping("/rooms")
     public List<Room> getAllRooms() {

@@ -6,13 +6,12 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "meetingroom")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Entity
+@Table(name = "meetingroom")
 public class Room {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -31,4 +30,5 @@ public class Room {
                 ", endHour='" + endHour + '\'' +
                 '}';
     }
+
 }

@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ResourceNotFoundException extends Exception {
 
     private static final long servialVersionUID = 1l;
+
     public ResourceNotFoundException(String message) {
         super(message);
     }
