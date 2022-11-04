@@ -1,6 +1,7 @@
 package com.github.antonioticelso.salaReuniao.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import javax.persistence.*;
 @Table(name = "meetingroom")
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 public class Room {
 
     @Id
