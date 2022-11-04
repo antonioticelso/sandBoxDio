@@ -13,8 +13,7 @@ import javax.persistence.*;
 @Table(name = "meetingroom")
 public class Room {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
     private String name;
     private String date;
     private String startHour;
