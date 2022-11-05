@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "d1a51788-86be-4979-baf2-3d3395b6ca26",
+		"name": "MeetRoom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - create meet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Fly Tecnolog I\",\r\n    \"date\":\"06/11/2022\",\r\n    \"startHour\":\"15hs\",\r\n    \"endHour\":\"17:30hs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/v1/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"v1",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - delete meet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/v1/rooms/4ecd5e3e12024b77a09a2b91f51ac17d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"v1",
+						"rooms",
+						"4ecd5e3e12024b77a09a2b91f51ac17d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - update meet Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"218f0e994cae44889ea330fb4eb7023f\",\r\n    \"name\": \"War Room Tecnolog I\",\r\n    \"date\": \"06/11/2022\",\r\n    \"startHour\": \"15hs\",\r\n    \"endHour\": \"17:30hs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/api/v1/rooms/218f0e994cae44889ea330fb4eb7023f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"v1",
+						"rooms",
+						"218f0e994cae44889ea330fb4eb7023f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - all meet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/api/v1/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"v1",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - id meet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/api/v1/rooms/218f0e994cae44889ea330fb4eb7023f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"api",
+						"v1",
+						"rooms",
+						"218f0e994cae44889ea330fb4eb7023f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
