@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -30,11 +32,34 @@ public class RoomService {
         return room;
     }
 
+    @Transactional
     public Room createRoom(Room room) {
         String id = getUUID();
         room.setId(id);
         repository.save(room);
         return room;
+    }
+
+    @Transactional
+    public Room updateRoom(String roomId, Room roomDetails) throws ResourceNotFoundException {
+        Room room = repository.findById(roomId).orElseThrow(() -> new ResourceNotFoundException("Room not found for this id: " + roomId));
+        room.setName(roomDetails.getName());
+        room.setDate(roomDetails.getDate());
+        room.setStartHour(roomDetails.getStartHour());
+        room.setEndHour(roomDetails.getEndHour());
+        final Room updateRoom = repository.save(room);
+
+        return updateRoom;
+
+    }
+
+    @Transactional
+    public void deleteRoom(String roomId) throws ResourceNotFoundException {
+        Room room = repository.findById(roomId).orElseThrow(() -> new ResourceNotFoundException("Room not found for this id: " + roomId));
+        repository.delete(room);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("deleted", Boolean.TRUE);
+
     }
 
     private static String getUUID() {
