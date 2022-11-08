@@ -10,10 +10,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class RoomDetailsComponent implements OnInit {
 
-  id: string;
-  room: Room;
+  id!: string;
+  room!: Room;
 
-  constructor(private route: ActivatedRoute,private router: Router,
+  constructor(private route: ActivatedRoute,
+              private router: Router,
               private roomService: RoomService) { }
 
   ngOnInit() {

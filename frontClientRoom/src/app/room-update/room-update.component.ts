@@ -5,13 +5,13 @@ import { RoomService } from '../room.service';
 
 @Component({
   selector: 'app-update-room',
-  templateUrl: './update-room.component.html',
-  styleUrls: ['./update-room.component.css']
+  templateUrl: './room-update.component.html',
+  styleUrls: ['./room-update.component.css']
 })
-export class UpdateRoomComponent implements OnInit {
+export class RoomUpdateComponent implements OnInit {
 
-  id: string;
-  room: Room;
+  id!: string;
+  room!: Room;
   submitted = false;
 
   constructor(private route: ActivatedRoute,private router: Router,
