@@ -8,14 +8,18 @@
 		<version>2.7.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.github.antonioticelso</groupId>
 	<artifactId>citiesApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>citiesApi</name>
 	<description>Demo project for Spring Boot of the cities</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
