@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/v1/staties")
+@RequestMapping("/v1/states")
 public class StateController {
 
     private final StateService service;
@@ -19,7 +19,7 @@ public class StateController {
     }
 
     @GetMapping
-    public List<State> staties() {
+    public List<State> states() {
         return service.findAll();
     }
 
