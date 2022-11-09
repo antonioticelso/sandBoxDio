@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/distances")
+@RequestMapping("/v1/distances")
 public class DistanceController {
 
     private final DistanceService service;

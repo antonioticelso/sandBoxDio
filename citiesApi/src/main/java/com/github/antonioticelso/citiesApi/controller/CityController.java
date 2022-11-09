@@ -18,12 +18,6 @@ public class CityController {
         this.service = service;
     }
 
-/* 1st
-  @GetMapping
-  public List<City> cities() {
-      return repository.findAll();
-  }*/
-
     @GetMapping
     public Page<City> cities(final Pageable page) {
         return service.findAll(page);
